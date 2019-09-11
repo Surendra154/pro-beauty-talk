@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyA5Cga1syPVcjCN-UDsV0QaqdojqKWBXP8',
+    authDomain: 'pro-beauty-talk.firebaseapp.com',
+    databaseURL: 'https://pro-beauty-talk.firebaseio.com',
+    projectId: 'pro-beauty-talk',
+    storageBucket: '',
+    messagingSenderId: '352607505435',
+    appId: '1:352607505435:web:894fdf756c11570ff4bcbe'
+  }
 };
 
 /*

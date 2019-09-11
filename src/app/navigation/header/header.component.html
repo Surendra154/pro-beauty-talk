@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+    <div fxHide.gt-xs>
+      <button mat-icon-button (click)="onSideNavToggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <div>
+      <a routerLink="/">PBT Logo</a>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+      <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+        <!-- <li *ngIf="!isAuth">
+          <a routerLink="/signup">Signup</a>
+        </li> -->
+        <li *ngIf="!isAuth">
+          <a routerLink="/login"><button mat-stroked-button class="login" color="primary" >Login</button></a>
+        </li>
+        <li *ngIf="isAuth">
+            <a routerLink="/profile">Profile</a>
+        </li>
+        <li *ngIf="isAuth">
+          <a style="cursor: pointer" (click)="onLogout()">Logout</a>
+        </li>`
+      </ul>
+    </div>
+  </mat-toolbar>
+  

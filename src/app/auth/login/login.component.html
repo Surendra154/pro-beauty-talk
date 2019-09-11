@@ -1,0 +1,35 @@
+<div class="container">
+    <div></div>
+    <div class="two">
+        <ngx-auth-firebaseui *ngIf="!isAuth; else loggedIn"
+        [guestEnabled]="false"
+        [providers]="[providers.Google, providers.Facebook, providers.Twitter]"
+        [providersTheme]="theme.FAB"
+        (onSuccess)="onSignUpSuccess($event)">
+      </ngx-auth-firebaseui>
+      <ng-template #loggedIn>
+        <app-user-profile></app-user-profile>
+      </ng-template>
+    </div>
+    <div></div>
+</div>
+
+<!-- <div 
+  class="login-form-field"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  >
+  <ngx-auth-firebaseui *ngIf="!isAuth; else loggedIn"
+    [guestEnabled]="false"
+    [providers]="[providers.Google, providers.Facebook, providers.Twitter]"
+    (onSuccess)="onSignUpSuccess($event)">
+  </ngx-auth-firebaseui>
+  <ng-template #loggedIn>
+    <app-user-profile></app-user-profile>
+  </ng-template>
+</div> -->
+
+<!-- <ngx-auth-firebaseui-login
+[providers]="[providers.Google, providers.Facebook, providers.Twitter]"
+(onCreateAccountRequested)="onCreateAccountRequested()">
+</ngx-auth-firebaseui-login> -->
